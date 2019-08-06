@@ -1,0 +1,36 @@
+<html>
+    
+
+    <body>
+    <h1>Welcome to Trip Planner!</h1>
+    
+
+    <h2>View Trips</h2>
+    <a href="http://localhost:3000"><h3>Add Trip</h3></a>
+    <div>
+        {{#trips}}
+        
+        <form action="/delete-trip" method="POST">
+        <div>
+            <img src={{image}}>
+            <b>Location: </b> {{tripLocation}}
+            <b>Start Date: </b> {{dateDeparture}}
+            <b>Return Date: </b>{{dateReturn}}
+            <button>Delete Trip</button>
+            <input type="hidden" name="tripName" value="{{tripLocation}}">
+        </div>  
+        </form>
+         
+
+        {{/trips}}
+    </div>
+
+
+
+    </body>
+
+
+
+
+
+</html>
